@@ -1,13 +1,64 @@
 <!doctype html>
 <html>
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
-    <div>
-        <img src="pick.jpg" class="w-screen">
+</head>
+<body>
+    <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('pick.jpg');">
+     <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('pick.jpg');">
+      <div class="grid grid-cols-9 gap-4 absolute top-10 left-0 w-full px-4">
+       <button class="sound-button w-24 h-24 text-white flex flex-col items-center justify-center rounded-sm border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('clap')">
+        <div class="text-lg  font-bold text-[2rem]">A</div>
+        <div class="text-xs text-yellow-400">CLAP</div>
+        <audio id="clap" src="clap.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24  text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('hithat')">
+        <div class="text-lg font-bold text-[2rem]">S</div>
+        <div class="text-xs text-yellow-400">HITHAT</div>
+        <audio id="hithat" src="hihat.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24  text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('kick')">
+        <div class="text-lg font-bold text-[2rem]">D</div>
+        <div class="text-xs text-yellow-400">KICK</div>
+        <audio id="kick" src="kick.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24 text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('openhat')">
+        <div class="text-lg font-bold text-[2rem]">F</div>
+        <div class="text-xs text-yellow-400">OPENHAT</div>
+        <audio id="openhat" src="openhat.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24 text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('boom')">
+        <div class="text-lg font-bold text-[2rem] ">G</div>
+        <div class="text-xs text-yellow-400">BOOM</div>
+        <audio id="boom" src="boom.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24  text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('ride')">
+        <div class="text-lg font-bold text-[2rem]">H</div>
+        <div class="text-xs text-yellow-400">RIDE</div>
+        <audio id="ride" src="ride.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24 text-white flex flex-col items-center justify-center rounded-sm  border-black border-4  mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('snare')">
+        <div class="text-lg font-bold text-[2rem]">J</div>
+        <div class="text-xs text-yellow-400">SNARE</div>
+        <audio id="snare" src="snare.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24  text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('tom')">
+        <div class="text-lg font-bold text-[2rem]">K</div>
+        <div class="text-xs text-yellow-400">TOM</div>
+        <audio id="tom" src="tom.wav"></audio>
+       </button>
+       <button class="sound-button w-24 h-24  text-white flex flex-col items-center justify-center rounded-sm  border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('tink')">
+        <div class="text-lg font-bold text-[2rem]">L</div>
+        <div class="text-xs text-yellow-400">TINK</div>
+        <audio id="tink" src="tink.wav"></audio>
+       </button>
+      </div>
+     </div>
+
     </div>
- </body>
+    <script src="script.js"></script>
+   </body>
 </html>

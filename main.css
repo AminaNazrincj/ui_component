@@ -1,0 +1,7 @@
+.drum-pad {
+    @apply bg-black/75 text-white font-bold uppercase rounded-md shadow-md text-center py-4 px-6 min-w-[80px];
+}
+
+.drum-key {
+    @apply text-yellow-400 text-sm block mt-1;
+}
