@@ -5,9 +5,40 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        .sound-button {
+         position: relative;
+         overflow: hidden;
+         transition: border-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .sound-button::after {
+         content: '';
+         display: block;
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         padding-top: 140%;
+         padding-left: 140%;
+         opacity: 0;
+         border-radius: 50%;
+         background: rgba(255, 255, 0, 0.5); /* Semi-transparent yellow */
+         transform: translate(-50%, -50%) scale(0);
+         transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+         z-index: -1;
+        }
+        .sound-button:active::after {
+         transform: translate(-50%, -50%) scale(1);
+         opacity: 1;
+         transition: transform 0s, opacity 0.2s ease-out;
+        }
+        .sound-button:hover {
+         border-color: gold;
+         box-shadow: 0 0 8px gold;
+        }
+        </style>
 </head>
 <body>
-    <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('pick.jpg');">
      <div class="relative w-screen h-screen bg-cover bg-center" style="background-image: url('pick.jpg');">
       <div class="grid grid-cols-9 gap-4 absolute top-10 left-0 w-full px-4">
        <button class="sound-button w-24 h-24 text-white flex flex-col items-center justify-center rounded-sm border-black border-4 mt-60 cursor-pointer transition-all duration-200 ease-in-out active:scale-95" onclick="playSound('clap')">
